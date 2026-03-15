@@ -5,7 +5,7 @@ from collections import defaultdict
 points = defaultdict(int)
 daily = defaultdict(int)
 
-SPECIAL_WORD = "sunx"
+SPECIAL_WORD = "MonkeyKingForPeace"
 DAILY_LIMIT = 25
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -37,7 +37,7 @@ async def show_rank(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text += f"{i+1}. {p} points\n"
     await update.message.reply_text(text)
 
-app = ApplicationBuilder().token("PASTE_YOUR_BOT_TOKEN_HERE").build()
+app = ApplicationBuilder().token("8497986868:AAE_QQDhW_oCHEXKsNS3YAuhCmSvkHj9k-s").build()
 
 app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^p$"), show_points))
 app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^r$"), show_rank))
